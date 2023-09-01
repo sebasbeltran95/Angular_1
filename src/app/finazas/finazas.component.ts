@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { persona } from '../persona';
 
 @Component({
   selector: 'app-finazas',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./finazas.component.css']
 })
 export class FinazasComponent {
-
+  nombre:any = 'pepito perez';
+  persona:persona = {
+    nombre: 'prueba',
+    edad: 30
+  }
 }
