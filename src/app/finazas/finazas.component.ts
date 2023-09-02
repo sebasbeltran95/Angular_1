@@ -12,4 +12,15 @@ export class FinazasComponent {
     nombre: 'prueba',
     edad: 30
   }
+
+  numero:number = 1;
+
+  decrementar(){
+    this.numero--;
+  }
+
+  incrementar(){
+    this.numero++;
+  }
+
 }
