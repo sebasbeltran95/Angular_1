@@ -1,0 +1,31 @@
+<!-- <div>
+    <button [class.disabled]="button_disabled" class="btn btn-danger" (click)="text-color = 'text_danger'">Color Rojo</button>
+    <button [class.disabled]="button_disabled" class="btn btn-success mx-2" (click)="text-color = 'text_success'">Color Verde</button>
+    <button [class.disabled]="button_disabled" class="btn btn-primary" (click)="text-color = 'text_primary'">Color Azul</button>
+</div> -->
+<div>
+    <button [class]="{
+        'disabled': button_disabled,
+        'btn':true,
+        'btn-danger':true
+    }" class="" (click)="text_color = 'text-danger'">Color Rojo</button>
+    <button [class]="{
+        'disabled': button_disabled,
+        'btn':true,
+        'btn-success':true,
+        'mx-2':true
+    }" class="" (click)="text_color = 'text-success'">Color Verde</button>
+    <button [class]="{
+        'disabled': button_disabled,
+        'btn':true,
+        'btn-primary':true
+    }" class="" (click)="text_color = 'text-primary'">Color Azul</button>
+</div>
+
+<p [class]="text_color">Texto que va a cambiar de color</p>
+<br>
+<!-- <p>
+    {{text_color}}
+</p> -->
+
+<button class="btn btn bg-secondary" (click)="button_disabled = !button_disabled">Activar/Desactivar</button>
