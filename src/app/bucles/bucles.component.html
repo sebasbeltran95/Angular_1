@@ -1,0 +1,20 @@
+<!-- ---------------------------------------------------------------------  -->
+<!-- <ul>
+    <li *ngFor="let persona of personas">
+        {{persona.nombre + ' '+ '(' + persona.edad + ')'}}
+    </li>
+</ul> -->
+<!-- ---------------------------------------------------------------------  -->
+<ul>
+    <li *ngFor="let persona of personas; let i = index">
+        {{i}} - {{persona.nombre}} ({{persona.edad}})
+    </li>
+</ul>
+<!-- ---------------------------------------------------------------------  -->
+
+<ul>
+    <li *ngFor="let persona of personas; let i = index">
+        {{i + 1}} - {{persona.nombre}} ({{persona.edad}})
+    </li>
+</ul>
+<!-- ---------------------------------------------------------------------  -->

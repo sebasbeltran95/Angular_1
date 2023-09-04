@@ -8,6 +8,7 @@ import { FinazasComponent } from './finazas/finazas.component';
 import { PruebaComponent } from './prueba/prueba.component';
 import { BotonesComponent } from './botones/botones.component';
 import { FormularioComponent } from './formulario/formulario.component';
+import { BuclesComponent } from './bucles/bucles.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormularioComponent } from './formulario/formulario.component';
     FinazasComponent,
     PruebaComponent,
     BotonesComponent,
-    FormularioComponent
+    FormularioComponent,
+    BuclesComponent
   ],
   imports: [
     BrowserModule
