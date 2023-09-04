@@ -7,8 +7,14 @@ import { Component } from '@angular/core';
 })
 export class BotonesComponent {
 
-  text_color:string = '';
+// <!-- -------------------------------------------------------------------------------------------------------------  -->
 
-  button_disabled:boolean = true;
+  // text_color:string = '';
+
+  // button_disabled:boolean = true;
+
+  // <!-- -------------------------------------------------------------------------------------------------------------  -->
+
+  src:string = "https://images.pexels.com/photos/17984660/pexels-photo-17984660/free-photo-of-blanco-y-negro-mujer-bailando-vestido.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
 
 }

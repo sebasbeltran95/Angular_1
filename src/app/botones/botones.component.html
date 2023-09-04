@@ -1,10 +1,13 @@
+<!-- -------------------------------------------------------------------------------------------------------------  -->
 <!-- <div>
     <button [class.disabled]="button_disabled" class="btn btn-danger" (click)="text-color = 'text_danger'">Color Rojo</button>
     <button [class.disabled]="button_disabled" class="btn btn-success mx-2" (click)="text-color = 'text_success'">Color Verde</button>
     <button [class.disabled]="button_disabled" class="btn btn-primary" (click)="text-color = 'text_primary'">Color Azul</button>
 </div> -->
-<div>
-    <button [class]="{
+<!-- -------------------------------------------------------------------------------------------------------------  -->
+
+<!-- <div>
+    <button [ngClass]="{
         'disabled': button_disabled,
         'btn':true,
         'btn-danger':true
@@ -20,12 +23,36 @@
         'btn':true,
         'btn-primary':true
     }" class="" (click)="text_color = 'text-primary'">Color Azul</button>
-</div>
+</div> -->
 
-<p [class]="text_color">Texto que va a cambiar de color</p>
-<br>
+<!-- <p [class]="text_color">Texto que va a cambiar de color</p> -->
+<!-- <button class="btn btn bg-secondary" (click)="button_disabled = !button_disabled">Activar/Desactivar</button> -->
+
+
+<!-- -------------------------------------------------------------------------------------------------------------  -->
+<!-- <div>
+    <button [disabled]='button_disabled' class="btn btn-danger" (click)="text_color = 'text-danger'">Color Rojo</button>
+    <button [disabled]='button_disabled' class="btn btn-success" (click)="text_color = 'text-success'">Color Verde</button>
+    <button [disabled]='button_disabled' class="btn btn-primary" (click)="text_color = 'text-primary'">Color Azul</button>
+</div> -->
+
+<!-- <p>Texto que va a cambiar de color</p> -->
+<!-- <br> -->
 <!-- <p>
     {{text_color}}
 </p> -->
 
-<button class="btn btn bg-secondary" (click)="button_disabled = !button_disabled">Activar/Desactivar</button>
+<!-- <button class="btn btn bg-secondary" (click)="button_disabled = !button_disabled">Activar/Desactivar</button> -->
+
+<!-- -------------------------------------------------------------------------------------------------------------  -->
+
+<div>
+    <button class="btn btn-primary" (click)="src = 'https://images.pexels.com/photos/18175120/pexels-photo-18175120/free-photo-of-cra.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'">
+        imagen 1
+    </button>
+    <button class="btn btn-danger" (click)="src = 'https://images.pexels.com/photos/13770156/pexels-photo-13770156.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'">
+        imagen 2
+    </button>
+</div>
+
+<img [src]="src" alt="">
