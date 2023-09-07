@@ -1,0 +1,28 @@
+<h1>Formulario basado en plantilla</h1>
+
+<div class="card">
+    <div class="card-body">
+        <form (ngSubmit)="procesar()">
+            <div class="mb-2">
+                <label>
+                    Nombre:
+                </label>
+                <input type="text" class="form-control" name="nombre" placeholder="porfavor ingrese un nombre" [(ngModel)]="persona.nombre">
+            </div>
+            <div>
+                <label class="form-label">
+                    Edad
+                </label>
+                <input type="number" class="form-control" name="edad" placeholder="porfavor ingrese su edad" [(ngModel)]="persona.edad">
+            </div>
+            <div class="mt-2">
+                <button class="btn btn-primary w-100">
+                    Enviar
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{{persona | json}}
