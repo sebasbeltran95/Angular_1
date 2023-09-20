@@ -9,5 +9,10 @@
     <!-- <app-switch></app-switch> -->
     <!-- <app-formulario2></app-formulario2> -->
     <!-- <app-formulario3></app-formulario3> -->
-    <app-formulario4></app-formulario4>
+    <!-- <app-formulario4></app-formulario4> -->
+    <!-- ----------------------------------------------------------------------  -->
+    <!-- <app-children title="texto de prueba"></app-children> -->
+    <!-- <app-children title="{{ title }}"></app-children> -->
+    <input type="text" class="form-control" [(ngModel)]="title">
+    <app-children [title]="title"></app-children>
 </div>
