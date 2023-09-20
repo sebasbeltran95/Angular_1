@@ -14,6 +14,7 @@ import { Formulario2Component } from './formulario2/formulario2.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Formulario3Component } from './formulario3/formulario3.component';
+import { Formulario4Component } from './formulario4/formulario4.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { Formulario3Component } from './formulario3/formulario3.component';
     BuclesComponent,
     SwitchComponent,
     Formulario2Component,
-    Formulario3Component
+    Formulario3Component,
+    Formulario4Component
   ],
   imports: [
     BrowserModule,

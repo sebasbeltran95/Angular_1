@@ -1,0 +1,40 @@
+<h1>Formularios Reactivos</h1>
+
+<div class="card mt-3">
+    <div class="card-body">
+        <form [formGroup]="formUser" (ngSubmit)="procesar()">
+            <div class="mb-2">
+                <label class="form-label">
+                    Nombre
+                </label>
+                <input type="text" formControlName="name" class="form-control" placeholder="Porfavor ingrese su nombre">
+                <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+                    El campo es obligatorio
+                </div>
+            </div>
+            <div class="mb-2">
+                <label class="form-label">
+                    Email
+                </label>
+                <input type="email" formControlName="email" class="form-control" placeholder="Porfavor ingrese su email">
+                <div class="alert alert-danger mt-2" [hidden]="email.valid || email.pristine">
+                    <span *ngIf="email.errors?.['required']">
+                        El campo es obligatorio
+                    </span>
+                    <span *ngIf="email.errors?.['email']">
+                        El campo debe ser valido
+                    </span>
+                </div>
+            </div>
+            <button class="btn btn-primary w-100" [disabled]="formUser.invalid">
+                Enviar
+            </button>
+        </form>
+    </div>
+    <!-- {{email.errors | json}} -->
+</div>
+
+<!-- <hr> {{name.value}} <br> {{email.value}} -->
+<!-- {{formUser.value | json}} -->
+<!-- {{formUser.get('name')?.value}}
+<br> {{formUser.get('email')?.value}} -->
