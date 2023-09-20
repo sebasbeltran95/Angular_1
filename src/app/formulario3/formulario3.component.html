@@ -2,7 +2,7 @@
 
 <div class="card mt-3">
     <div class="card-body">
-        <form [formGroup]="formUser">
+        <form [formGroup]="formUser" (ngSubmit)="procesar()">
             <div class="mb-2">
                 <label class="form-label">
                     Nombre

@@ -34,7 +34,9 @@ export class Formulario3Component {
     'email':new FormControl('',[Validators.required, Validators.email])
   });
 // --------------------------------------------------------------------------------- 
-
+  procesar(){
+    console.log(this.formUser.value);
+  }
 
 // --------------------------------------------------------------------------------- 
   // name = new FormControl('sebastian');
