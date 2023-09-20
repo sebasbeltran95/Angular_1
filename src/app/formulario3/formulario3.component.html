@@ -2,12 +2,25 @@
 
 <div class="card mt-3">
     <div class="card-body">
-        <form>
+        <form [formGroup]="formUser">
             <div class="mb-2">
                 <label class="form-label">
                     Nombre
                 </label>
-                <input type="text" [formControl]="name" class="form-control" placeholder="Porfavor ingrese su nombre">
+                <!-- ------------------------------------------------------------------------------------------------------------------------  -->
+                <!-- <input type="text" [formControl]="name" class="form-control" placeholder="Porfavor ingrese su nombre"> -->
+                <!-- ------------------------------------------------------------------------------------------------------------------------  -->
+                <!-- <input type="text" formControlName="name" class="form-control" placeholder="Porfavor ingrese su nombre"> -->
+                <!-- <div class="alert alert-danger mt-2" [hidden]="formUser.get('name')?.valid || formUser.get('name')?.pristine">
+                    El campo es obligatorio
+                </div> -->
+                <!-- ------------------------------------------------------------------------------------------------------------------------  -->
+                <!-- <input type="text" formControlName="name" class="form-control" placeholder="Porfavor ingrese su nombre">
+                <div class="alert alert-danger mt-2" [hidden]="name?.valid || name?.pristine">
+                    El campo es obligatorio
+                </div> -->
+                <!-- ------------------------------------------------------------------------------------------------------------------------  -->
+                <input type="text" formControlName="name" class="form-control" placeholder="Porfavor ingrese su nombre">
                 <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
                     El campo es obligatorio
                 </div>
@@ -16,7 +29,30 @@
                 <label class="form-label">
                     Email
                 </label>
-                <input type="email" [formControl]="email" class="form-control" placeholder="Porfavor ingrese su email">
+                <!-- ------------------------------------------------------------------------------------------------------------------------  -->
+                <!-- <input type="email" [formControl]="email" class="form-control" placeholder="Porfavor ingrese su email"> -->
+                <!-- ------------------------------------------------------------------------------------------------------------------------  -->
+                <!-- <input type="email" formControlName="email" class="form-control" placeholder="Porfavor ingrese su email">
+                <div class="alert alert-danger mt-2" [hidden]="formUser.get('email')?.valid || formUser.get('email')?.pristine">
+                    <span *ngIf="formUser.get('email')?.errors?.['required']">
+                        El campo es obligatorio
+                    </span>
+                    <span *ngIf="formUser.get('email')?.errors?.['email']">
+                        El campo debe ser valido
+                    </span>
+                </div> -->
+                <!-- ------------------------------------------------------------------------------------------------------------------------  -->
+                <!-- <input type="email" formControlName="email" class="form-control" placeholder="Porfavor ingrese su email">
+                <div class="alert alert-danger mt-2" [hidden]="email?.valid || email?.pristine">
+                    <span *ngIf="email?.errors?.['required']">
+                        El campo es obligatorio
+                    </span>
+                    <span *ngIf="email?.errors?.['email']">
+                        El campo debe ser valido
+                    </span>
+                </div> -->
+                <!-- ------------------------------------------------------------------------------------------------------------------------  -->
+                <input type="email" formControlName="email" class="form-control" placeholder="Porfavor ingrese su email">
                 <div class="alert alert-danger mt-2" [hidden]="email.valid || email.pristine">
                     <span *ngIf="email.errors?.['required']">
                         El campo es obligatorio
@@ -26,7 +62,12 @@
                     </span>
                 </div>
             </div>
-            <button class="btn btn-primary w-100">
+            <!-- ------------------------------------------------------------------------------------------------------------------------  -->
+            <!-- <button class="btn btn-primary w-100" [disabled]="name.invalid || email.invalid">
+                Enviar
+            </button> -->
+            <!-- ------------------------------------------------------------------------------------------------------------------------  -->
+            <button class="btn btn-primary w-100" [disabled]="formUser.invalid">
                 Enviar
             </button>
         </form>
@@ -35,3 +76,6 @@
 </div>
 
 <!-- <hr> {{name.value}} <br> {{email.value}} -->
+<!-- {{formUser.value | json}} -->
+<!-- {{formUser.get('name')?.value}}
+<br> {{formUser.get('email')?.value}} -->
