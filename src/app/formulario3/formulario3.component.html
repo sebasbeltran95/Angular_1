@@ -17,8 +17,13 @@
                     Email
                 </label>
                 <input type="email" [formControl]="email" class="form-control" placeholder="Porfavor ingrese su email">
-                <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
-                    El campo es obligatorio
+                <div class="alert alert-danger mt-2" [hidden]="email.valid || email.pristine">
+                    <span *ngIf="email.errors?.['required']">
+                        El campo es obligatorio
+                    </span>
+                    <span *ngIf="email.errors?.['email']">
+                        El campo debe ser valido
+                    </span>
                 </div>
             </div>
             <button class="btn btn-primary w-100">
@@ -26,6 +31,7 @@
             </button>
         </form>
     </div>
+    <!-- {{email.errors | json}} -->
 </div>
 
 <!-- <hr> {{name.value}} <br> {{email.value}} -->

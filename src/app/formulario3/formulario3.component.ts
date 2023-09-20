@@ -11,6 +11,6 @@ export class Formulario3Component {
   // name = new FormControl('sebastian');
   // email = new FormControl('sebastian@hotmail.com');
   name = new FormControl('', Validators.required);
-  email = new FormControl('',Validators.required);
+  email = new FormControl('',[Validators.required, Validators.email]);
   
 }
